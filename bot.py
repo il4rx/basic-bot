@@ -43,6 +43,8 @@ async def embed(ctx):
 async def help(ctx):
   embed = discord.Embed(title=f"{ctx.author} - Help Command", description="This is the available course :", color=discord.Colour.random())
   embed.add_field(name="Commands :", value=helpMessage)
+  await ctx.send(embed=embed)
+
 # say command by using args argument
 @bot.command()
 async def say(ctx, message_provide):
