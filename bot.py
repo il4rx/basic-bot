@@ -52,10 +52,16 @@ async def say(ctx, message_provide):
     await ctx.delete.message()
 
 
-@bot.command(Pass_context=True)
+@bot.command(pass_context=True)
+@commands.has_permissions(manage_messages=True)
 async def purge(ctx, amount : int):
     await ctx.send(f"{ctx.author} Has purging this channel!")
     await ctx.channel.purge(limit=amount)
-
+ 
+# if you dont have the permissions
+@purge.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingPermissions):
+        await ctx.send("You cant do that!")
 # connect your bot
 bot.run("Your bot token")
