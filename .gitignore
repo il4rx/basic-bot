@@ -2,12 +2,14 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.github/
 
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
+.github
 build/
 develop-eggs/
 dist/
