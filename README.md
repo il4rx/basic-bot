@@ -7,8 +7,8 @@ The command are handling this bot is
 > `embed` - Testing embedded messages <br>
 > `say` - saying every message / echo any args<br>
 > `purge` - purging the channel with explicit value
-> `ping` - Return client ms
-> `magic_ball` - Magic 8 balls
+> `ping` - Return client ms <br>
+> `magic_ball` - Magic 8 balls <br>
 
 # prefix
 For prefix is set to defaut as `!!`.<br>
