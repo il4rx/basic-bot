@@ -6,7 +6,7 @@ The command are handling this bot is
 > `test` - Just starting message<br>
 > `embed` - Testing embedded messages <br>
 > `say` - saying every message / echo any args<br>
-> `purge` - purging the channel with explicit value
+> `purge` - purging the channel with explicit value <br>
 > `ping` - Return client ms <br>
 > `magic_ball` - Magic 8 balls <br>
 
