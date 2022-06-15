@@ -29,6 +29,11 @@ helpMessage = """
 `say` - Say All User Message
 """
 @bot.command()
+async def ping(ctx):
+    embed = discord.Embed(title="Pong ! :ping_pong:", description=f"{round(bot.latency * 1000)} Ms", color=discord.Colour.random())
+    await ctx.send(embed=embed)
+  
+@bot.command()
 async def test(ctx):
     await ctx.send(f"Hello {ctx.author.mention}") # Without embed
 
@@ -47,10 +52,10 @@ async def help(ctx):
 
 # say command by using args argument
 @bot.command()
-async def say(ctx, message_provide):
-    await ctx.send(f"{ctx.author.mention} has typing --> {message_provide}")
-    await ctx.delete.message()
-
+async def say(ctx, *, messages=None):
+    if messages is not None:
+        await ctx.send(f"{messages}")
+        await ctx.message.delete()
 
 @bot.command(pass_context=True)
 @commands.has_permissions(manage_messages=True)
@@ -63,5 +68,17 @@ async def purge(ctx, amount : int):
 async def clear_error(ctx, error):
     if isinstance(error, commands.MissingPermissions):
         await ctx.send("You cant do that!")
+ 
+
+@bot.command()
+async def magic_ball(ctx, *, messages=None):
+    import random
+    if messages is not None :
+        answer = ["yes", "no", "not sure", "100% YESS", "Absolutely Not", "Ask me again"]
+        embed = discord.Embed(title="Magic 8 Ball", description=f"""
+You asked : `{messages}`
+The Answer : `{random.choice(answer)}`
+        """, color=discord.Colour.random())
+        await ctx.send(embed=embed)
 # connect your bot
 bot.run("Your bot token")
