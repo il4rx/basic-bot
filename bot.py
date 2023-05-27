@@ -1,6 +1,4 @@
 import os
-from pydoc import describe
-from turtle import title
 import discord
 from discord.ext import commands
 
