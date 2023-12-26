@@ -3,13 +3,15 @@ This bot is simply to learn, i've input some<br>
 command in this bot.
 The command available in this bot are :
 <br>
-> `help` - is using to defer the commands on the list<br>
-> `test` - Just starting message<br>
-> `embed` - Testing embedded messages <br>
-> `say` - saying every message / echo any args<br>
-> `purge` - purging the channel with explicit value <br>
-> `ping` - Return client ms <br>
-> `magic_ball` - Magic 8 balls <br>
+| Commands    | Output                                                             |
+| ------------| ------------------------------------------------------------------ |
+| `help`       | Get The Full List Of The Commands  |
+| `embed`      | The Fancy Version of `say` command |
+| `test`       | Use Only For Testing Command       |
+| `say`        | Say or Repeats your message, similarly to @echo |
+| `purge`      | Clear Message, You Can Provide the Amount Of Value to Controll |
+| `ping`       | Return your client latency (ms)    |
+| `magic_ball` | Run Magic 8 Ball                   |
 
 # Prefix
 For prefix is set to defaut as `!!`.<br>
