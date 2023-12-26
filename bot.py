@@ -16,7 +16,7 @@ async def on_ready():
     print(platform.node() + " Joined as admin");
 
     # bot presence
-    await bot.change_presence(status=discord.Status.idle, activity=discord.Game(name="You Need to smiling :)"))
+    await bot.change_presence(status=discord.Status.idle, activity=discord.Game(name="Activity goes here"))
 
 # command
 # you should using prefix with @bot.command or using nonType Message as client.event
