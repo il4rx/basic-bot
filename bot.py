@@ -1,11 +1,13 @@
 import os
 import discord
 from discord.ext import commands
-
 import platform
+
+
 # Start
-client = discord.Client()
-bot = commands.Bot(command_prefix="!!", help_command=None)
+intents = discord.Intents().all()
+client = discord.Client(intents=discord.Intents.default())
+bot = commands.Bot(command_prefix="!!", help_command=None, intents=intents)
 
 # login vanity
 @bot.event
@@ -14,7 +16,7 @@ async def on_ready():
     print(platform.node() + " Joined as admin");
 
     # bot presence
-    await bot.change_presence(activity=discord.Game(name="You Need to smiling :)"))
+    await bot.change_presence(status=discord.Status.idle, activity=discord.Game(name="You Need to smiling :)"))
 
 # command
 # you should using prefix with @bot.command or using nonType Message as client.event
