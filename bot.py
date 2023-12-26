@@ -2,6 +2,8 @@ import os
 import discord
 from discord.ext import commands
 import platform
+import time, datetime
+from time import sleep
 
 
 # Start
