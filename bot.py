@@ -49,8 +49,8 @@ async def help(ctx):
 
 # say command by using args argument
 @bot.command()
-async def say(ctx, message_provide):
-    await ctx.send(f"{ctx.author.mention} has typing --> {message_provide}")
+async def say(ctx, messages):
+    await ctx.send(f"{ctx.author.mention} has typing --> {messages}")
     await ctx.delete.message()
 
 
